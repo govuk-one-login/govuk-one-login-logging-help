@@ -1,0 +1,26 @@
+{
+  "name": "@govuk-one-login/logging",
+  "version": "1.0.0",
+  "description": "Standardised logging helper for GOV.UK One Login Lambda functions",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "@aws-lambda-powertools/logger": "^2.0.0"
+  },
+  "devDependencies": {
+    "@aws-lambda-powertools/logger": "^2.0.0",
+    "@types/aws-lambda": "^8.10.145",
+    "@types/node": "^26.1.1",
+    "typescript": "^5.5.0",
+    "vitest": "^3.2.0"
+  },
+  "license": "MIT"
+}
