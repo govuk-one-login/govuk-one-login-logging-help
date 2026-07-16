@@ -2,6 +2,7 @@
   "name": "@govuk-one-login/logging",
   "version": "1.0.0",
   "description": "Standardised logging helper for GOV.UK One Login Lambda functions",
+  "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -19,10 +20,15 @@
   },
   "devDependencies": {
     "@aws-lambda-powertools/logger": "^2.0.0",
+    "@eslint/js": "^10.0.1",
     "@types/aws-lambda": "^8.10.145",
     "@types/node": "^26.1.1",
+    "@typescript-eslint/parser": "^8.64.0",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^17.7.0",
     "lint-staged": "^17.0.8",
     "typescript": "^5.5.0",
+    "typescript-eslint": "^8.64.0",
     "vitest": "^3.2.0"
   },
   "lint-staged": {

@@ -1,2 +1,2 @@
-export { OneLoginLogger } from "./formatter";
-export { logger, initialiseLogger } from "./logger";
+export { OneLoginLogger } from './formatter.js'
+export { logger, initialiseLogger } from './logger.js'

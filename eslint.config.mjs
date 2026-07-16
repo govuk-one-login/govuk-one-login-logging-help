@@ -45,7 +45,7 @@ export default [
       // add splunk to ignore list as we use console.log for int and e2e test logs
       'common/services/splunk/*'
     ],
-    rules: { 'no-console': ['off'] }
+    rules: { 'no-console': ['off'], '@typescript-eslint/no-empty-function': 'off' }
   },
   eslintConfigPrettier
 ]
