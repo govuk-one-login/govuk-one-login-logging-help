@@ -22,6 +22,7 @@ jobs:
       - run: npm publish --ignore-scripts
         env:
           NODE_AUTH_TOKEN: ${{ secrets.TEMP_ACCESS }}
+          CI: true
 
   delete-branch:
     runs-on: ubuntu-latest
