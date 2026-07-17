@@ -1,0 +1,9 @@
+.editorconfig
+.eslintignore
+.gitignore
+.gitkeep
+.husky
+.npmrc
+.nvmrc
+.pnp.*
+.prettierignore
