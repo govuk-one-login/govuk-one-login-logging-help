@@ -4,6 +4,29 @@ Standardised logging helper for GOV.UK One Login Lambda functions. Provides a pr
 
 ## Installation
 
+This package is published to **GitHub Packages**, not the public npm registry. You need to configure your project to resolve the `@govuk-one-login` scope from GitHub Packages before installing.
+
+### 1. Configure registry
+
+Create an `.npmrc` file in the root of your consuming project:
+
+```
+@govuk-one-login:registry=https://npm.pkg.github.com
+//npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}
+```
+
+### 2. Set up authentication
+
+Generate a [GitHub Personal Access Token](https://github.com/settings/tokens) with the `read:packages` scope and export it in your shell:
+
+```bash
+export GITHUB_TOKEN=ghp_your_token_here
+```
+
+> **⚠️ Do not hardcode the token in `.npmrc`.** Always reference it via the environment variable. If using GitHub Actions, the built-in `GITHUB_TOKEN` secret has read access to packages automatically.
+
+### 3. Install
+
 ```bash
 npm install @govuk-one-login/logging @aws-lambda-powertools/logger
 ```
