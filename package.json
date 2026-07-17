@@ -13,7 +13,7 @@
     "test": "vitest run",
     "prepublishOnly": "npm run build",
     "lint": "eslint .",
-    "prepare": "husky"
+    "prepare": "husky || true"
   },
   "peerDependencies": {
     "@aws-lambda-powertools/logger": "^2.0.0"
