@@ -17,12 +17,14 @@ jobs:
           node-version: 22
           cache: npm
           registry-url: https://npm.pkg.github.com
+          scope: "@govuk-one-login"
       - run: npm ci --ignore-scripts
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: npm run build
       - run: npm publish --ignore-scripts
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          CI: true
 
   delete-branch:
     runs-on: ubuntu-latest
