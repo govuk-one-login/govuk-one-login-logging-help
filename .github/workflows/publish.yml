@@ -21,7 +21,7 @@ jobs:
       - run: npm run build
       - run: npm publish
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.TEMP_ACCESS }}
 
   delete-branch:
     runs-on: ubuntu-latest
