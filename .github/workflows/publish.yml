@@ -22,3 +22,20 @@ jobs:
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  delete-branch:
+    runs-on: ubuntu-latest
+    needs: publish
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Delete feature branch
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          BRANCH="${{ github.event.ref }}"
+          BRANCH="${BRANCH#refs/heads/}"
+          if [[ "$BRANCH" != "main" ]]; then
+            gh api -X DELETE "repos/${{ github.repository }}/git/refs/heads/$BRANCH"
+          fi
