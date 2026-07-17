@@ -1,4 +1,4 @@
-# @govuk-one-login/logging
+# @govuk-one-login/dpt-logging
 
 Standardised logging helper for GOV.UK One Login Lambda functions. Provides a pre-configured [AWS Lambda Powertools](https://docs.powertools.aws.dev/lambda/typescript/latest/) logger with a custom formatter that produces a consistent JSON log shape across all services.
 
@@ -28,13 +28,13 @@ export GITHUB_TOKEN=ghp_your_token_here
 ### 3. Install
 
 ```bash
-npm install @govuk-one-login/logging @aws-lambda-powertools/logger
+npm install @govuk-one-login/dpt-logging @aws-lambda-powertools/logger
 ```
 
 ## Usage
 
 ```typescript
-import { logger, initialiseLogger } from "@govuk-one-login/logging";
+import { logger, initialiseLogger } from "@govuk-one-login/dpt-logging";
 import type { Context, SQSEvent } from "aws-lambda";
 
 export async function handler(event: SQSEvent, context: Context) {
