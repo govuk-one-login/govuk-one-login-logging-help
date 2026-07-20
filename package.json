@@ -1,5 +1,5 @@
 {
-  "name": "@govuk-one-login/logging",
+  "name": "@govuk-one-login/dpt-logging",
   "version": "1.0.0",
   "description": "Standardised logging helper for GOV.UK One Login Lambda functions",
   "type": "module",
@@ -24,9 +24,11 @@
     "@types/aws-lambda": "^8.10.145",
     "@types/node": "^26.1.1",
     "@typescript-eslint/parser": "^8.64.0",
+    "eslint": "^10.7.0",
     "eslint-config-prettier": "^10.1.8",
     "globals": "^17.7.0",
     "lint-staged": "^17.0.8",
+    "prettier": "^3.9.5",
     "typescript": "^5.5.0",
     "typescript-eslint": "^8.64.0",
     "vitest": "^3.2.0"
@@ -42,9 +44,5 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
-  "license": "MIT",
-  "dependencies": {
-    "eslint": "^10.7.0",
-    "prettier": "^3.9.5"
-  }
+  "license": "MIT"
 }
